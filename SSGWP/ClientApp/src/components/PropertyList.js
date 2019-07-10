@@ -78,13 +78,13 @@ export class PropertyList extends Component {
             <div>
             <div style={{ display: 'inline-block', width: '50%', paddingRight: '20px' }}>
             <form onSubmit={this.handleSubmit} id="myForm">
-                {html}
-                <button className="btn btn-primary" type="submit" value="Submit">Submit</button>
+                        {html}
+                        <button className="btn btn-primary" type="submit" value="Submit" style={{ marginRight: '10px' }}>Submit</button>
                 <button className="btn btn-success" type="button" value="Update" onClick={this.updatePicture}>Update</button>
                 </form>
                 </div>
 
-                <div style={{ display: 'inline-block', width: '50%', height: '60vh' }}>
+                <div style={{ display: 'inline-block', width: '50%', height: '60vh', verticalAlign: 'top' }}>
                     <img src={this.state.image} alt="Preview URL" style={{ objectFit: 'fill', height: '100%' }} />
                 </div>
                 </div>
