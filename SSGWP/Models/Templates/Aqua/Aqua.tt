@@ -1,0 +1,59 @@
+﻿<#@ template language="C#" #>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><#=Properties["SiteName"]#></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+<div style="clear: both">
+    <nav class="navbar navbar-dark bg-dark" style="padding-left: 20%; padding-right: 20%">
+        <a href="#firstSection">Home</a>
+        <a href="#mainSection">About Us</a>
+        <a href="#work">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <nav class="navbar navbar-dark bg-dark fixed-top" style="padding-left: 20%; padding-right: 20%">
+        <a href="#firstSection">Home</a>
+        <a href="#mainSection">About Us</a>
+        <a href="#work">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</div>
+<div id="firstSection" style="background-color: <#=Properties["FirstSectionColor"]#>; padding-top: 40px; width: 100%; display: inline-block">
+    <img src=<#=Properties["LogoURL"]#> style="height: 200px; width: 200px">
+    <p style="font-size: 40px; text-align: center; color: <#=Properties["MottoColor"]#>"><#=Properties["Motto"]#></p>
+</div>
+<div id="mainSection" style="padding-left: 20%; padding-right: 20%; background-color: <#=Properties["MainSectionBgColor"]#>">
+    <p style="color: <#=Properties["MainSectionTxtColor"]#>">
+        <#=Properties["MainSection"]#>
+    </p>
+    <img src= "<#=Properties["PictureUrl"]#>"
+         style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+</div>
+<div id="work" style="width:100%; padding-left: 20%; padding-right: 20%; background-color: <#=Properties["MainSectionBgColor"]#>; display: inline-block">
+    <ul> 
+	<li style="color:<#=Properties["MainSectionTxtColor"]#>">
+	<#=Properties["Projects"]#>
+	</li>
+	
+	</ul>
+</div>
+<div id="contact" style="background-color: <#=Properties["ContactSectionBgColor"]#>; padding: 20px 20%">
+    <p>
+        <i class="fas fa-envelope-square" style="color: <#=Properties["ContactSectionTxtColor"]#>"> E-mail: <#=Properties["Email"]#></i>
+    </p>
+    <p>
+        <i class="fas fa-phone-square" style="color: <#=Properties["ContactSectionTxtColor"]#>"> Phone: <#=Properties["Phone"]#></i>
+    </p>
+    <p>
+        <i class="fas fa-map-marker-alt" style="color: <#=Properties["ContactSectionTxtColor"]#>"> Address: <#=Properties["Address"]#></i>
+    </p>
+</div>
+</body>
+</html>
